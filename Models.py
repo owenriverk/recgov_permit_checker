@@ -15,9 +15,8 @@ class Preference(Base):
 
 # Connect to the database using the env variable
 import os
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://permituser:permitpass@localhost:5432/permitdb")
-
-engine = create_engine(DATABASE_URL)
+DATABASE_URL = "sqlite:///./test.db"
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(bind=engine)
 
 def init_db():
