@@ -168,7 +168,7 @@ def send_alert(permits_found: List[str]) -> bool:
         sender_email = os.environ.get('PERMIT_EMAIL', 'govrecpermit@gmail.com')
         recipients = [
             os.environ.get('PERMIT_EMAIL', 'govrecpermit@gmail.com'),
-            'owenriverk@gmail.com'
+            'owenriverk@gmail.com', 'godoggie@gmail.com', 'shellikai@gmail.com', 'lizwilli541@gmail.com'
         ]
         
         msg['From'] = sender_email
