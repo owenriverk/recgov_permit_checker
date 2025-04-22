@@ -67,4 +67,6 @@ def run_forever() -> None:
 if __name__ == "__main__":
     # Only run if this file is executed directly (not imported)
     logger.info("Starting permit checker service")
+    logger.warning("🚨 Main.py has started and is running under supervisor.")
+
     run_forever()
