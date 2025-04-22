@@ -18,3 +18,17 @@ services:
     restart: always
     env_file:
       - .env
+  
+  db:
+    image: postgres:15
+    container_name: permit_postgres
+    environment:
+      POSTGRES_DB: permitdb
+      POSTGRES_USER: permituser
+      POSTGRES_PASSWORD: permitpass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:
