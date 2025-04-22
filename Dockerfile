@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir fastapi uvicorn pandas requests python-dotenv sqlalchemy
 
 # This will be overridden by docker-compose for each service
 EXPOSE 8000
